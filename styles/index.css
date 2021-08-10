@@ -3,17 +3,34 @@ body {
   padding: 0;
 }
 
-#snake-game-board {
+#snake-game {
+  width: 1200px;
+  height: 1200px;
+  margin: auto;
+}
+
+#snake-board {
   display: grid;
   background-color: rgb(23, 143, 19);
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  justify-items: center;
 }
 
 .tiles {
-  background-color: aqua;
+  background-color: rgb(73, 230, 144);
   width: auto;
   height: auto;
+  position: absolute;
+}
+
+#welcome-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%); 
+  text-align: center;
 }

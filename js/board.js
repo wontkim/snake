@@ -24,25 +24,25 @@ class Board {
     ];
   }
 
-  // buildBoard() {
-  //   this.tiles.forEach((tile, row) => {
-  //     const newRow = $('<div></div>').addClass('row').attr('id', `row-${row}`).appendTo('#snake-game-board');
-  //     tile.forEach((spot, col) => {
-  //       const newSpot = $('<div></div>').addClass('col').attr('id', `col-${col}`);
-  //       newSpot.appendTo(newRow);
-  //     })
-  //   })
-  // }
-
+  //construct board
   buildBoard() {
     this.tiles.forEach((tile, row) => {
       tile.forEach((cell, col) => {
         const newTile = $('<div></div>').addClass('tiles').attr('id', `${row}-${col}`);
-        $('#snake-game-board').append(newTile);
+        $('#snake-board').append(newTile);
       })
-    })
+    });
+  }
+
+  //add loading screen
+  loadingScreen() {
+    const screen = $('<div></div>').attr('id', 'welcome-screen')
+    const title = $('<h1>Welcome to Snake</h1>').attr('id', 'title').appendTo(screen);
+    const play = $('<button>Let\'s play!</button>').attr('id', 'play-button').appendTo(screen);
+    $('#snake-game').append(screen);
   }
 };
 
 const newBoard = new Board();
 newBoard.buildBoard();
+newBoard.loadingScreen();
