@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#snake-game-board {
+  display: grid;
+  background-color: rgb(23, 143, 19);
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  width: 1000px;
+  height: 1000px;
+}
+
+.tiles {
+  background-color: aqua;
+  width: auto;
+  height: auto;
+}
